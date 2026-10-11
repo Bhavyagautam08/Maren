@@ -4,7 +4,7 @@ A modern, full-stack e-commerce application built with **Next.js 16**, **Express
 
 ---
 
-## ✨ Features
+##  Features
 
 - OTP-based email verification on sign-up
 - JWT authentication with access & refresh tokens
@@ -26,7 +26,7 @@ ecommerce/
 
 ---
 
-## 🚀 Getting Started (Local Development)
+##  Getting Started (Local Development)
 
 ### Prerequisites
 - Node.js 18+
