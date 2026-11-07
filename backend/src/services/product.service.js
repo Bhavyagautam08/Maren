@@ -1,4 +1,5 @@
 import Product from "../models/product.model.js";
+import { DISABLE_PRODUCT_CACHE, PRODUCT_CACHE_NAMESPACE } from "../config/env.js";
 import { getCache, setCache , invalidateProductCache} from "./cache.service.js";
 
 export const createProduct = async (data) => {
@@ -28,8 +29,13 @@ export const getAllProducts = async (
     sort = "newest",
     category = ""
 ) => {
-    const cacheKey = `products:page=${page}:limit=${limit}:search=${search}:sort=${sort}:category=${category}`;
-    const cachedProducts = await getCache(cacheKey);
+    const namespace = PRODUCT_CACHE_NAMESPACE
+        ? `${PRODUCT_CACHE_NAMESPACE}:`
+        : "";
+    const cacheKey = `products:${namespace}page=${page}:limit=${limit}:search=${search}:sort=${sort}:category=${category}`;
+    const cachedProducts = DISABLE_PRODUCT_CACHE
+        ? null
+        : await getCache(cacheKey);
 
     if (cachedProducts) {
         return cachedProducts;
@@ -84,9 +90,11 @@ export const getAllProducts = async (
         }
     };
 
-await setCache(cacheKey, result);
+    if (!DISABLE_PRODUCT_CACHE) {
+        await setCache(cacheKey, result);
+    }
 
-return result;
+    return result;
 };
 
 export const getProductById = async (id) => {
