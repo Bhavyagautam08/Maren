@@ -6,7 +6,7 @@ A modern, full-stack e-commerce application built with **Next.js 16**, **Express
 
 ##  Features
 
-- OTP-based email verification on sign-up
+- Direct account registration
 - JWT authentication with access & refresh tokens
 - Product listing, filtering, and detail pages
 - Shopping cart with real-time quantity management
