@@ -137,7 +137,7 @@ const buildReadme = ({ stages, seed, index, throughput, correctness, suite }) =>
         "",
         "## Inventory race test",
         "",
-        `Target: exactly ${20} repetitions at each concurrency level (2, 10, 50, 100 buyers), one stock unit.`,
+        `Target: exactly ${20} repetitions at each concurrency level (2, 10, 50, 100 buyers), one stock unit; each HTTP request has a 120-second timeout.`,
         "",
         "| Simultaneous buyers | Runs | Passed | Failed | Successful orders | Stock rejections | Final stock 0 | Oversell runs |",
         "|---:|---:|---:|---:|---:|---:|---:|---:|",
