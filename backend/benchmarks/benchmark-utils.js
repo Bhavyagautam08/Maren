@@ -70,10 +70,6 @@ export const benchmarkMongoConnectionString = () => {
         throw new Error("Benchmark MongoDB settings are missing.");
     }
     const uri = new URL(benchmarkMongoUri);
-    if (!uri.searchParams.has("authSource")) {
-        const originalDatabaseName = decodeURIComponent(uri.pathname.replace(/^\/|\/$/g, ""));
-        uri.searchParams.set("authSource", originalDatabaseName || "admin");
-    }
     uri.pathname = `/${encodeURIComponent(benchmarkDatabaseName)}`;
     return uri.toString();
 };
@@ -98,13 +94,27 @@ export const startBenchmarkBackend = ({ port, disableProductCache, cacheNamespac
         stdio: ["ignore", "pipe", "pipe"]
     });
     let output = "";
+    const getOutput = () => {
+        let safeOutput = output;
+        for (const secret of [
+            process.env.BENCHMARK_MONGO_URI,
+            benchmarkMongoConnectionString(),
+            process.env.UPSTASH_REDIS_REST_URL,
+            process.env.UPSTASH_REDIS_REST_TOKEN
+        ]) {
+            if (secret) {
+                safeOutput = safeOutput.replaceAll(secret, "[redacted]");
+            }
+        }
+        return safeOutput;
+    };
     child.stdout.on("data", (chunk) => {
         output = `${output}${chunk}`.slice(-20_000);
     });
     child.stderr.on("data", (chunk) => {
         output = `${output}${chunk}`.slice(-20_000);
     });
-    return { child, getOutput: () => output };
+    return { child, getOutput };
 };
 
 export const waitForBackend = async ({ child, getOutput }, baseUrl) => {

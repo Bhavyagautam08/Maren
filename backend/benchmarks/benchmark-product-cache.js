@@ -268,7 +268,11 @@ const main = async () => {
                 }
                 await saveRawResult(`throughput-${runId}-${scenario.id}.json`, result);
             } catch (error) {
-                scenarioFailures.push({ scenario: scenario.id, error: error.message });
+                const backendOutput = backend?.getOutput();
+                const details = backendOutput
+                    ? `${error.stack || error.message}\nBackend output:\n${backendOutput}`
+                    : error.stack || error.message;
+                scenarioFailures.push({ scenario: scenario.id, error: details });
                 const failure = {
                     runId,
                     timestamp: new Date().toISOString(),
@@ -278,7 +282,7 @@ const main = async () => {
                     databaseName: benchmarkDatabaseName,
                     gitCommit,
                     machine: machineInfo,
-                    error: error.stack || error.message
+                    error: details
                 };
                 await saveRawResult(`throughput-${runId}-${scenario.id}.json`, failure);
                 console.error(`Throughput ${scenario.id} failed: ${error.message}`);

@@ -24,6 +24,7 @@ const concurrencyLevels = [2, 10, 50, 100];
 const repetitions = 20;
 const maxBuyers = Math.max(...concurrencyLevels);
 const timeoutMs = 30_000;
+let activeBackend;
 
 const createFixtureProduct = async (name, stock) => Product.create({
     name,
@@ -240,6 +241,7 @@ const main = async () => {
             disableProductCache: false,
             cacheNamespace: `benchmark-orders-${runId}`
         });
+        activeBackend = backend;
         await waitForBackend(backend, BASE_URL);
         await waitForCatalogReady();
 
@@ -338,11 +340,15 @@ const main = async () => {
 };
 
 main().catch(async (error) => {
-    console.error(`Order correctness benchmark failed: ${error.stack || error.message}`);
+    const backendOutput = activeBackend?.getOutput();
+    const details = backendOutput
+        ? `${error.stack || error.message}\nBackend output:\n${backendOutput}`
+        : error.stack || error.message;
+    console.error(`Order correctness benchmark failed: ${error.message}`);
     const failure = {
         runId,
         status: "failed",
-        error: error.stack || error.message,
+        error: details,
         gitCommit,
         machine: machineInfo,
         command: "npm --prefix backend run benchmark:all"
