@@ -88,6 +88,8 @@ The app will be available at `http://localhost:3000`.
 | `UPSTASH_REDIS_REST_TOKEN` | Upstash Redis REST token |
 | `CLIENT_URL` | Primary frontend origin allowed by CORS |
 | `CLIENT_URLS` | Optional comma-separated additional frontend origins |
+| `DEMO_ACCOUNT_EMAIL` | Reserved `.example` email for the on-demand seeded demo account |
+| `DEMO_ACCOUNT_PASSWORD` | Throwaway password for the demo account |
 | `SMTP_EMAIL` | Gmail address for sending OTPs |
 | `SMTP_PASSWORD` | Gmail App Password |
 
@@ -96,6 +98,40 @@ The app will be available at `http://localhost:3000`.
 | Variable | Description |
 |---|---|
 | `NEXT_PUBLIC_API_URL` | Full base URL of the backend API |
+| `NEXT_PUBLIC_DEMO_EMAIL` | Optional public demo-account email to prefill on the login page |
+| `NEXT_PUBLIC_DEMO_PASSWORD` | Optional public demo-account password to prefill on the login page |
+
+---
+
+## 🌐 Live Demo
+
+When `NEXT_PUBLIC_DEMO_EMAIL` and `NEXT_PUBLIC_DEMO_PASSWORD` are both set in
+the frontend environment, the login form is pre-filled and displays a note
+inviting visitors to sign in. These `NEXT_PUBLIC_` values are visible to users;
+use only a throwaway demo password, never a personal or production credential.
+Set them in the frontend host's environment and redeploy so Next.js includes
+them in the client bundle.
+Set the same values as `DEMO_ACCOUNT_EMAIL` and `DEMO_ACCOUNT_PASSWORD` in
+`backend/.env` (the email must use the reserved `.example` domain), then create
+or refresh the normal-customer account with:
+
+```bash
+npm --prefix backend run seed:demo
+```
+
+The demo account is assigned the normal `user` role. The app has no account
+email/password update endpoint. To clean up after recruiter activity, run:
+
+```bash
+npm --prefix backend run reset:demo
+```
+
+The reset removes the demo account's cart and orders, restores product stock
+consumed by its non-cancelled orders, and clears the account's order
+idempotency keys and product cache entries. Run it on demand or schedule it
+with the backend host's job scheduler. Both commands use `backend/.env` and
+the configured `MONGO_URI`; the reset requires a MongoDB deployment that
+supports transactions.
 
 ---
 

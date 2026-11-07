@@ -1,2 +1,4 @@
-.env
+# Environment files
+.env*
+!.env.example
 node_modules

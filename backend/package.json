@@ -8,6 +8,8 @@
     "dev": "nodemon server.js",
     "start": "node server.js",
     "seed": "node seed.js",
+    "seed:demo": "node scripts/seed-demo-account.js",
+    "reset:demo": "node scripts/reset-demo-account.js",
     "benchmark:products": "node benchmarks/benchmark-product-cache.js",
     "benchmark:all": "node benchmarks/benchmark-all.js"
   },

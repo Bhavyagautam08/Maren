@@ -5,10 +5,16 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import styles from "./page.module.css";
 
+const demoEmail = process.env.NEXT_PUBLIC_DEMO_EMAIL || "";
+const demoPassword = process.env.NEXT_PUBLIC_DEMO_PASSWORD || "";
+
 export default function LoginPage() {
   const router = useRouter();
   const { login } = useAuth();
-  const [form, setForm] = useState({ email: "", password: "" });
+  const [form, setForm] = useState({
+    email: demoEmail,
+    password: demoPassword,
+  });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -64,6 +70,12 @@ export default function LoginPage() {
             <div className="alert alert-error animate-fade-in">
               {error}
             </div>
+          )}
+
+          {demoEmail && demoPassword && (
+            <p className={styles.demoNote}>
+              Demo account: credentials are pre-filled. Just click Login.
+            </p>
           )}
 
           <form onSubmit={handleSubmit} className={styles.form}>
