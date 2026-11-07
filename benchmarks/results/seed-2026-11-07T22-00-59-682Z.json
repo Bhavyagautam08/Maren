@@ -1,0 +1,34 @@
+{
+  "runId": "2026-11-07T22-00-59-682Z",
+  "status": "passed",
+  "startedAt": "2026-11-07T22:01:01.199Z",
+  "finishedAt": "2026-11-07T22:01:27.104Z",
+  "databaseName": "maren_benchmark",
+  "productCount": 100000,
+  "seed": "0x4d415245",
+  "generator": "mulberry32",
+  "fixedCreatedAtRange": {
+    "first": "2020-01-01T00:00:00.000Z",
+    "last": "2020-01-02T03:46:39.000Z"
+  },
+  "indexesBefore": [
+    {
+      "v": 2,
+      "key": {
+        "_id": 1
+      },
+      "name": "_id_"
+    }
+  ],
+  "gitCommit": "c9ae32bfd1e23cc3b397eeffdd6260f3b7a80d09",
+  "machine": {
+    "platform": "win32 10.0.26300",
+    "architecture": "x64",
+    "node": "v24.18.0",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "cpuCount": 12,
+    "totalMemoryBytes": 8212975616,
+    "freeMemoryBytesAtStart": 787927040
+  },
+  "command": "npm --prefix backend run benchmark:all"
+}

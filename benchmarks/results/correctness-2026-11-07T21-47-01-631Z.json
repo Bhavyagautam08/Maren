@@ -1,0 +1,16 @@
+{
+  "runId": "2026-11-07T21-47-01-631Z",
+  "status": "failed",
+  "error": "Error: Benchmark backend catalog readiness timed out: fetch failed\n    at waitForCatalogReady (file:///D:/ecommerce/backend/benchmarks/benchmark-order-correctness.js:229:11)\n    at async main (file:///D:/ecommerce/backend/benchmarks/benchmark-order-correctness.js:244:9)",
+  "gitCommit": "02e8013bb58a65d2c6eafab13a8798d4e3620630",
+  "machine": {
+    "platform": "win32 10.0.26300",
+    "architecture": "x64",
+    "node": "v24.18.0",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "cpuCount": 12,
+    "totalMemoryBytes": 8212975616,
+    "freeMemoryBytesAtStart": 836206592
+  },
+  "command": "npm --prefix backend run benchmark:all"
+}

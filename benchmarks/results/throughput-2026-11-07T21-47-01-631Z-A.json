@@ -1,0 +1,24 @@
+{
+  "runId": "2026-11-07T21-47-01-631Z",
+  "timestamp": "2026-11-07T21:47:24.393Z",
+  "status": "failed",
+  "scenario": {
+    "id": "A",
+    "description": "No createdAt index; cache disabled",
+    "hasIndex": false,
+    "cacheEnabled": false
+  },
+  "endpoint": "http://127.0.0.1:5100/api/v1/products?page=1&limit=10&sort=newest",
+  "databaseName": "maren_benchmark",
+  "gitCommit": "02e8013bb58a65d2c6eafab13a8798d4e3620630",
+  "machine": {
+    "platform": "win32 10.0.26300",
+    "architecture": "x64",
+    "node": "v24.18.0",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "cpuCount": 12,
+    "totalMemoryBytes": 8212975616,
+    "freeMemoryBytesAtStart": 854007808
+  },
+  "error": "TypeError: fetch failed"
+}

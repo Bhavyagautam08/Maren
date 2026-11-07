@@ -1,0 +1,479 @@
+{
+  "runId": "2026-11-07T21-47-01-631Z",
+  "timestamp": "2026-11-07T21:48:32.115Z",
+  "status": "failed",
+  "databaseName": "maren_benchmark",
+  "redisProvider": "Upstash Redis REST",
+  "gitCommit": "02e8013bb58a65d2c6eafab13a8798d4e3620630",
+  "machine": {
+    "platform": "win32 10.0.26300",
+    "architecture": "x64",
+    "node": "v24.18.0",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "cpuCount": 12,
+    "totalMemoryBytes": 8212975616,
+    "freeMemoryBytesAtStart": 625594368
+  },
+  "stages": [
+    {
+      "id": "seed",
+      "status": "passed",
+      "command": "node benchmarks/seed-benchmark-catalog.js",
+      "exitCode": 0,
+      "signal": null,
+      "stdout": "◇ injected env (0) from .env // tip: ⌘ override existing { override: true }\nSeeded 1000/100000 products\nSeeded 2000/100000 products\nSeeded 3000/100000 products\nSeeded 4000/100000 products\nSeeded 5000/100000 products\nSeeded 6000/100000 products\nSeeded 7000/100000 products\nSeeded 8000/100000 products\nSeeded 9000/100000 products\nSeeded 10000/100000 products\nSeeded 11000/100000 products\nSeeded 12000/100000 products\nSeeded 13000/100000 products\nSeeded 14000/100000 products\nSeeded 15000/100000 products\nSeeded 16000/100000 products\nSeeded 17000/100000 products\nSeeded 18000/100000 products\nSeeded 19000/100000 products\nSeeded 20000/100000 products\nSeeded 21000/100000 products\nSeeded 22000/100000 products\nSeeded 23000/100000 products\nSeeded 24000/100000 products\nSeeded 25000/100000 products\nSeeded 26000/100000 products\nSeeded 27000/100000 products\nSeeded 28000/100000 products\nSeeded 29000/100000 products\nSeeded 30000/100000 products\nSeeded 31000/100000 products\nSeeded 32000/100000 products\nSeeded 33000/100000 products\nSeeded 34000/100000 products\nSeeded 35000/100000 products\nSeeded 36000/100000 products\nSeeded 37000/100000 products\nSeeded 38000/100000 products\nSeeded 39000/100000 products\nSeeded 40000/100000 products\nSeeded 41000/100000 products\nSeeded 42000/100000 products\nSeeded 43000/100000 products\nSeeded 44000/100000 products\nSeeded 45000/100000 products\nSeeded 46000/100000 products\nSeeded 47000/100000 products\nSeeded 48000/100000 products\nSeeded 49000/100000 products\nSeeded 50000/100000 products\nSeeded 51000/100000 products\nSeeded 52000/100000 products\nSeeded 53000/100000 products\nSeeded 54000/100000 products\nSeeded 55000/100000 products\nSeeded 56000/100000 products\nSeeded 57000/100000 products\nSeeded 58000/100000 products\nSeeded 59000/100000 products\nSeeded 60000/100000 products\nSeeded 61000/100000 products\nSeeded 62000/100000 products\nSeeded 63000/100000 products\nSeeded 64000/100000 products\nSeeded 65000/100000 products\nSeeded 66000/100000 products\nSeeded 67000/100000 products\nSeeded 68000/100000 products\nSeeded 69000/100000 products\nSeeded 70000/100000 products\nSeeded 71000/100000 products\nSeeded 72000/100000 products\nSeeded 73000/100000 products\nSeeded 74000/100000 products\nSeeded 75000/100000 products\nSeeded 76000/100000 products\nSeeded 77000/100000 products\nSeeded 78000/100000 products\nSeeded 79000/100000 products\nSeeded 80000/100000 products\nSeeded 81000/100000 products\nSeeded 82000/100000 products\nSeeded 83000/100000 products\nSeeded 84000/100000 products\nSeeded 85000/100000 products\nSeeded 86000/100000 products\nSeeded 87000/100000 products\nSeeded 88000/100000 products\nSeeded 89000/100000 products\nSeeded 90000/100000 products\nSeeded 91000/100000 products\nSeeded 92000/100000 products\nSeeded 93000/100000 products\nSeeded 94000/100000 products\nSeeded 95000/100000 products\nSeeded 96000/100000 products\nSeeded 97000/100000 products\nSeeded 98000/100000 products\nSeeded 99000/100000 products\nSeeded 100000/100000 products\nSeed verification: 100000 products; seed 0x4d415245.\n",
+      "stderr": ""
+    },
+    {
+      "id": "product",
+      "status": "failed",
+      "command": "node benchmarks/benchmark-product-cache.js",
+      "exitCode": 1,
+      "signal": null,
+      "stdout": "◇ injected env (0) from .env // tip: ⌘ override existing { override: true }\n",
+      "stderr": "Throughput A failed: fetch failed\nThroughput B failed: fetch failed\nThroughput C failed: fetch failed\n"
+    },
+    {
+      "id": "correctness",
+      "status": "failed",
+      "command": "node benchmarks/benchmark-order-correctness.js",
+      "exitCode": 1,
+      "signal": null,
+      "stdout": "◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]\n",
+      "stderr": "Order correctness benchmark failed: Error: Benchmark backend catalog readiness timed out: fetch failed\n    at waitForCatalogReady (file:///D:/ecommerce/backend/benchmarks/benchmark-order-correctness.js:229:11)\n    at async main (file:///D:/ecommerce/backend/benchmarks/benchmark-order-correctness.js:244:9)\n"
+    }
+  ],
+  "seed": {
+    "runId": "2026-11-07T21-47-01-631Z",
+    "status": "passed",
+    "startedAt": "2026-11-07T21:47:03.954Z",
+    "finishedAt": "2026-11-07T21:47:20.439Z",
+    "databaseName": "maren_benchmark",
+    "productCount": 100000,
+    "seed": "0x4d415245",
+    "generator": "mulberry32",
+    "fixedCreatedAtRange": {
+      "first": "2020-01-01T00:00:00.000Z",
+      "last": "2020-01-02T03:46:39.000Z"
+    },
+    "indexesBefore": [
+      {
+        "v": 2,
+        "key": {
+          "_id": 1
+        },
+        "name": "_id_"
+      }
+    ],
+    "gitCommit": "02e8013bb58a65d2c6eafab13a8798d4e3620630",
+    "machine": {
+      "platform": "win32 10.0.26300",
+      "architecture": "x64",
+      "node": "v24.18.0",
+      "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+      "cpuCount": 12,
+      "totalMemoryBytes": 8212975616,
+      "freeMemoryBytesAtStart": 753328128
+    },
+    "command": "npm --prefix backend run benchmark:all"
+  },
+  "index": {
+    "runId": "2026-11-07T21-47-01-631Z",
+    "timestamp": "2026-11-07T21:47:28.928Z",
+    "databaseName": "maren_benchmark",
+    "dataset": {
+      "productCount": 100000
+    },
+    "results": [
+      {
+        "scenario": "A",
+        "query": {
+          "sort": {
+            "createdAt": -1
+          },
+          "limit": 10
+        },
+        "totalDocsExamined": 100000,
+        "totalKeysExamined": 0,
+        "executionTimeMillis": 90,
+        "winningPlanStages": [
+          "SORT",
+          "COLLSCAN"
+        ],
+        "executionStages": [
+          "SORT",
+          "COLLSCAN"
+        ],
+        "classification": "COLLSCAN+SORT",
+        "rawExplain": {
+          "explainVersion": "1",
+          "queryPlanner": {
+            "namespace": "maren_benchmark.products",
+            "parsedQuery": {},
+            "indexFilterSet": false,
+            "queryHash": "7B43E37B",
+            "planCacheShapeHash": "7B43E37B",
+            "planCacheKey": "76FECFA7",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "prunedSimilarIndexes": false,
+            "winningPlan": {
+              "isCached": false,
+              "stage": "SORT",
+              "sortPattern": {
+                "createdAt": -1
+              },
+              "memLimit": 33554432,
+              "limitAmount": 10,
+              "type": "simple",
+              "inputStage": {
+                "stage": "COLLSCAN",
+                "direction": "forward"
+              }
+            },
+            "rejectedPlans": []
+          },
+          "executionStats": {
+            "executionSuccess": true,
+            "nReturned": 10,
+            "executionTimeMillis": 90,
+            "totalKeysExamined": 0,
+            "totalDocsExamined": 100000,
+            "executionStages": {
+              "isCached": false,
+              "stage": "SORT",
+              "nReturned": 10,
+              "executionTimeMillisEstimate": 89,
+              "works": 100012,
+              "advanced": 10,
+              "needTime": 100001,
+              "needYield": 0,
+              "saveState": 6,
+              "restoreState": 6,
+              "isEOF": 1,
+              "sortPattern": {
+                "createdAt": -1
+              },
+              "memLimit": 33554432,
+              "limitAmount": 10,
+              "type": "simple",
+              "totalDataSizeSorted": 3115,
+              "usedDisk": false,
+              "spills": 0,
+              "spilledDataStorageSize": 0,
+              "inputStage": {
+                "stage": "COLLSCAN",
+                "nReturned": 100000,
+                "executionTimeMillisEstimate": 33,
+                "works": 100001,
+                "advanced": 100000,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 6,
+                "restoreState": 6,
+                "isEOF": 1,
+                "direction": "forward",
+                "docsExamined": 100000
+              }
+            }
+          },
+          "queryShapeHash": "0743A6DEAC470A00D8C5952DE6E3C5718A88DE2514941ABD4A0D3FD6F938DA67",
+          "command": {
+            "find": "products",
+            "filter": {},
+            "sort": {
+              "createdAt": -1
+            },
+            "limit": 10,
+            "$db": "maren_benchmark"
+          },
+          "serverInfo": {
+            "host": "ac-qyd5aki-shard-00-01.qrqeutf.mongodb.net",
+            "port": 27017,
+            "version": "8.0.37",
+            "gitVersion": "8ece10cbfc3379404a0dffdfb448b9e873b494f7"
+          },
+          "serverParameters": {
+            "internalQueryFacetBufferSizeBytes": 104857600,
+            "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+            "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+            "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+            "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+            "internalQueryProhibitBlockingMergeOnMongoS": 0,
+            "internalQueryMaxAddToSetBytes": 104857600,
+            "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+            "internalQueryFrameworkControl": "trySbeRestricted",
+            "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+          },
+          "ok": 1,
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": "7705549457944739843"
+            },
+            "signature": {
+              "hash": "wv0YWdFZ5eBjjktBII7ALdp61xI=",
+              "keyId": {
+                "high": 1786389924,
+                "low": 6,
+                "unsigned": false
+              }
+            }
+          },
+          "operationTime": {
+            "$timestamp": "7705549457944739843"
+          }
+        },
+        "expectedClassification": "COLLSCAN+SORT",
+        "passed": true
+      },
+      {
+        "scenario": "B",
+        "query": {
+          "sort": {
+            "createdAt": -1
+          },
+          "limit": 10
+        },
+        "totalDocsExamined": 10,
+        "totalKeysExamined": 10,
+        "executionTimeMillis": 1,
+        "winningPlanStages": [
+          "LIMIT",
+          "FETCH",
+          "IXSCAN"
+        ],
+        "executionStages": [
+          "LIMIT",
+          "FETCH",
+          "IXSCAN"
+        ],
+        "classification": "IXSCAN",
+        "rawExplain": {
+          "explainVersion": "1",
+          "queryPlanner": {
+            "namespace": "maren_benchmark.products",
+            "parsedQuery": {},
+            "indexFilterSet": false,
+            "queryHash": "7B43E37B",
+            "planCacheShapeHash": "7B43E37B",
+            "planCacheKey": "76FECFA7",
+            "optimizationTimeMillis": 0,
+            "maxIndexedOrSolutionsReached": false,
+            "maxIndexedAndSolutionsReached": false,
+            "maxScansToExplodeReached": false,
+            "prunedSimilarIndexes": false,
+            "winningPlan": {
+              "isCached": false,
+              "stage": "LIMIT",
+              "limitAmount": 10,
+              "inputStage": {
+                "stage": "FETCH",
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "keyPattern": {
+                    "createdAt": -1
+                  },
+                  "indexName": "createdAt_-1",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "createdAt": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "createdAt": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  }
+                }
+              }
+            },
+            "rejectedPlans": []
+          },
+          "executionStats": {
+            "executionSuccess": true,
+            "nReturned": 10,
+            "executionTimeMillis": 1,
+            "totalKeysExamined": 10,
+            "totalDocsExamined": 10,
+            "executionStages": {
+              "isCached": false,
+              "stage": "LIMIT",
+              "nReturned": 10,
+              "executionTimeMillisEstimate": 2,
+              "works": 11,
+              "advanced": 10,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 1,
+              "limitAmount": 10,
+              "inputStage": {
+                "stage": "FETCH",
+                "nReturned": 10,
+                "executionTimeMillisEstimate": 2,
+                "works": 10,
+                "advanced": 10,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 0,
+                "docsExamined": 10,
+                "alreadyHasObj": 0,
+                "inputStage": {
+                  "stage": "IXSCAN",
+                  "nReturned": 10,
+                  "executionTimeMillisEstimate": 2,
+                  "works": 10,
+                  "advanced": 10,
+                  "needTime": 0,
+                  "needYield": 0,
+                  "saveState": 0,
+                  "restoreState": 0,
+                  "isEOF": 0,
+                  "keyPattern": {
+                    "createdAt": -1
+                  },
+                  "indexName": "createdAt_-1",
+                  "isMultiKey": false,
+                  "multiKeyPaths": {
+                    "createdAt": []
+                  },
+                  "isUnique": false,
+                  "isSparse": false,
+                  "isPartial": false,
+                  "indexVersion": 2,
+                  "direction": "forward",
+                  "indexBounds": {
+                    "createdAt": [
+                      "[MaxKey, MinKey]"
+                    ]
+                  },
+                  "keysExamined": 10,
+                  "seeks": 1,
+                  "dupsTested": 0,
+                  "dupsDropped": 0
+                }
+              }
+            }
+          },
+          "queryShapeHash": "0743A6DEAC470A00D8C5952DE6E3C5718A88DE2514941ABD4A0D3FD6F938DA67",
+          "command": {
+            "find": "products",
+            "filter": {},
+            "sort": {
+              "createdAt": -1
+            },
+            "limit": 10,
+            "$db": "maren_benchmark"
+          },
+          "serverInfo": {
+            "host": "ac-qyd5aki-shard-00-01.qrqeutf.mongodb.net",
+            "port": 27017,
+            "version": "8.0.37",
+            "gitVersion": "8ece10cbfc3379404a0dffdfb448b9e873b494f7"
+          },
+          "serverParameters": {
+            "internalQueryFacetBufferSizeBytes": 104857600,
+            "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+            "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+            "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+            "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+            "internalQueryProhibitBlockingMergeOnMongoS": 0,
+            "internalQueryMaxAddToSetBytes": 104857600,
+            "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+            "internalQueryFrameworkControl": "trySbeRestricted",
+            "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+          },
+          "ok": 1,
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": "7705549466534674447"
+            },
+            "signature": {
+              "hash": "eSHSD631ml15efnZLEnQMWWufTE=",
+              "keyId": {
+                "high": 1786389924,
+                "low": 6,
+                "unsigned": false
+              }
+            }
+          },
+          "operationTime": {
+            "$timestamp": "7705549466534674447"
+          }
+        },
+        "expectedClassification": "IXSCAN",
+        "passed": true
+      }
+    ],
+    "validationFailures": [],
+    "restoration": "restored 0 original createdAt index(es)",
+    "gitCommit": "02e8013bb58a65d2c6eafab13a8798d4e3620630",
+    "machine": {
+      "platform": "win32 10.0.26300",
+      "architecture": "x64",
+      "node": "v24.18.0",
+      "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+      "cpuCount": 12,
+      "totalMemoryBytes": 8212975616,
+      "freeMemoryBytesAtStart": 854007808
+    },
+    "command": "npm --prefix backend run benchmark:all"
+  },
+  "throughput": {
+    "runId": "2026-11-07T21-47-01-631Z",
+    "timestamp": "2026-11-07T21:47:28.928Z",
+    "results": [],
+    "failures": [
+      {
+        "scenario": "A",
+        "error": "fetch failed"
+      },
+      {
+        "scenario": "B",
+        "error": "fetch failed"
+      },
+      {
+        "scenario": "C",
+        "error": "fetch failed"
+      }
+    ],
+    "restoration": "restored 0 original createdAt index(es)",
+    "gitCommit": "02e8013bb58a65d2c6eafab13a8798d4e3620630",
+    "machine": {
+      "platform": "win32 10.0.26300",
+      "architecture": "x64",
+      "node": "v24.18.0",
+      "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+      "cpuCount": 12,
+      "totalMemoryBytes": 8212975616,
+      "freeMemoryBytesAtStart": 854007808
+    },
+    "command": "npm --prefix backend run benchmark:all"
+  },
+  "correctness": {
+    "runId": "2026-11-07T21-47-01-631Z",
+    "status": "failed",
+    "error": "Error: Benchmark backend catalog readiness timed out: fetch failed\n    at waitForCatalogReady (file:///D:/ecommerce/backend/benchmarks/benchmark-order-correctness.js:229:11)\n    at async main (file:///D:/ecommerce/backend/benchmarks/benchmark-order-correctness.js:244:9)",
+    "gitCommit": "02e8013bb58a65d2c6eafab13a8798d4e3620630",
+    "machine": {
+      "platform": "win32 10.0.26300",
+      "architecture": "x64",
+      "node": "v24.18.0",
+      "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+      "cpuCount": 12,
+      "totalMemoryBytes": 8212975616,
+      "freeMemoryBytesAtStart": 836206592
+    },
+    "command": "npm --prefix backend run benchmark:all"
+  },
+  "command": "npm --prefix backend run benchmark:all"
+}

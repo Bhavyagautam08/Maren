@@ -1,0 +1,23 @@
+{
+  "concurrency": 10,
+  "repetition": 5,
+  "productId": "6aef9dadb54049430d90676d",
+  "successfulOrders": 1,
+  "rejectedOrders": 9,
+  "createdOrders": 1,
+  "finalStock": 0,
+  "unexpectedResponses": [],
+  "statuses": [
+    400,
+    201,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400
+  ],
+  "passed": true
+}

@@ -1,0 +1,351 @@
+{
+  "runId": "2026-11-07T21-47-01-631Z",
+  "timestamp": "2026-11-07T21:47:28.928Z",
+  "databaseName": "maren_benchmark",
+  "dataset": {
+    "productCount": 100000
+  },
+  "results": [
+    {
+      "scenario": "A",
+      "query": {
+        "sort": {
+          "createdAt": -1
+        },
+        "limit": 10
+      },
+      "totalDocsExamined": 100000,
+      "totalKeysExamined": 0,
+      "executionTimeMillis": 90,
+      "winningPlanStages": [
+        "SORT",
+        "COLLSCAN"
+      ],
+      "executionStages": [
+        "SORT",
+        "COLLSCAN"
+      ],
+      "classification": "COLLSCAN+SORT",
+      "rawExplain": {
+        "explainVersion": "1",
+        "queryPlanner": {
+          "namespace": "maren_benchmark.products",
+          "parsedQuery": {},
+          "indexFilterSet": false,
+          "queryHash": "7B43E37B",
+          "planCacheShapeHash": "7B43E37B",
+          "planCacheKey": "76FECFA7",
+          "optimizationTimeMillis": 0,
+          "maxIndexedOrSolutionsReached": false,
+          "maxIndexedAndSolutionsReached": false,
+          "maxScansToExplodeReached": false,
+          "prunedSimilarIndexes": false,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "SORT",
+            "sortPattern": {
+              "createdAt": -1
+            },
+            "memLimit": 33554432,
+            "limitAmount": 10,
+            "type": "simple",
+            "inputStage": {
+              "stage": "COLLSCAN",
+              "direction": "forward"
+            }
+          },
+          "rejectedPlans": []
+        },
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 10,
+          "executionTimeMillis": 90,
+          "totalKeysExamined": 0,
+          "totalDocsExamined": 100000,
+          "executionStages": {
+            "isCached": false,
+            "stage": "SORT",
+            "nReturned": 10,
+            "executionTimeMillisEstimate": 89,
+            "works": 100012,
+            "advanced": 10,
+            "needTime": 100001,
+            "needYield": 0,
+            "saveState": 6,
+            "restoreState": 6,
+            "isEOF": 1,
+            "sortPattern": {
+              "createdAt": -1
+            },
+            "memLimit": 33554432,
+            "limitAmount": 10,
+            "type": "simple",
+            "totalDataSizeSorted": 3115,
+            "usedDisk": false,
+            "spills": 0,
+            "spilledDataStorageSize": 0,
+            "inputStage": {
+              "stage": "COLLSCAN",
+              "nReturned": 100000,
+              "executionTimeMillisEstimate": 33,
+              "works": 100001,
+              "advanced": 100000,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 6,
+              "restoreState": 6,
+              "isEOF": 1,
+              "direction": "forward",
+              "docsExamined": 100000
+            }
+          }
+        },
+        "queryShapeHash": "0743A6DEAC470A00D8C5952DE6E3C5718A88DE2514941ABD4A0D3FD6F938DA67",
+        "command": {
+          "find": "products",
+          "filter": {},
+          "sort": {
+            "createdAt": -1
+          },
+          "limit": 10,
+          "$db": "maren_benchmark"
+        },
+        "serverInfo": {
+          "host": "ac-qyd5aki-shard-00-01.qrqeutf.mongodb.net",
+          "port": 27017,
+          "version": "8.0.37",
+          "gitVersion": "8ece10cbfc3379404a0dffdfb448b9e873b494f7"
+        },
+        "serverParameters": {
+          "internalQueryFacetBufferSizeBytes": 104857600,
+          "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+          "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+          "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+          "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+          "internalQueryProhibitBlockingMergeOnMongoS": 0,
+          "internalQueryMaxAddToSetBytes": 104857600,
+          "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+          "internalQueryFrameworkControl": "trySbeRestricted",
+          "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+        },
+        "ok": 1,
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": "7705549457944739843"
+          },
+          "signature": {
+            "hash": "wv0YWdFZ5eBjjktBII7ALdp61xI=",
+            "keyId": {
+              "high": 1786389924,
+              "low": 6,
+              "unsigned": false
+            }
+          }
+        },
+        "operationTime": {
+          "$timestamp": "7705549457944739843"
+        }
+      },
+      "expectedClassification": "COLLSCAN+SORT",
+      "passed": true
+    },
+    {
+      "scenario": "B",
+      "query": {
+        "sort": {
+          "createdAt": -1
+        },
+        "limit": 10
+      },
+      "totalDocsExamined": 10,
+      "totalKeysExamined": 10,
+      "executionTimeMillis": 1,
+      "winningPlanStages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "executionStages": [
+        "LIMIT",
+        "FETCH",
+        "IXSCAN"
+      ],
+      "classification": "IXSCAN",
+      "rawExplain": {
+        "explainVersion": "1",
+        "queryPlanner": {
+          "namespace": "maren_benchmark.products",
+          "parsedQuery": {},
+          "indexFilterSet": false,
+          "queryHash": "7B43E37B",
+          "planCacheShapeHash": "7B43E37B",
+          "planCacheKey": "76FECFA7",
+          "optimizationTimeMillis": 0,
+          "maxIndexedOrSolutionsReached": false,
+          "maxIndexedAndSolutionsReached": false,
+          "maxScansToExplodeReached": false,
+          "prunedSimilarIndexes": false,
+          "winningPlan": {
+            "isCached": false,
+            "stage": "LIMIT",
+            "limitAmount": 10,
+            "inputStage": {
+              "stage": "FETCH",
+              "inputStage": {
+                "stage": "IXSCAN",
+                "keyPattern": {
+                  "createdAt": -1
+                },
+                "indexName": "createdAt_-1",
+                "isMultiKey": false,
+                "multiKeyPaths": {
+                  "createdAt": []
+                },
+                "isUnique": false,
+                "isSparse": false,
+                "isPartial": false,
+                "indexVersion": 2,
+                "direction": "forward",
+                "indexBounds": {
+                  "createdAt": [
+                    "[MaxKey, MinKey]"
+                  ]
+                }
+              }
+            }
+          },
+          "rejectedPlans": []
+        },
+        "executionStats": {
+          "executionSuccess": true,
+          "nReturned": 10,
+          "executionTimeMillis": 1,
+          "totalKeysExamined": 10,
+          "totalDocsExamined": 10,
+          "executionStages": {
+            "isCached": false,
+            "stage": "LIMIT",
+            "nReturned": 10,
+            "executionTimeMillisEstimate": 2,
+            "works": 11,
+            "advanced": 10,
+            "needTime": 0,
+            "needYield": 0,
+            "saveState": 0,
+            "restoreState": 0,
+            "isEOF": 1,
+            "limitAmount": 10,
+            "inputStage": {
+              "stage": "FETCH",
+              "nReturned": 10,
+              "executionTimeMillisEstimate": 2,
+              "works": 10,
+              "advanced": 10,
+              "needTime": 0,
+              "needYield": 0,
+              "saveState": 0,
+              "restoreState": 0,
+              "isEOF": 0,
+              "docsExamined": 10,
+              "alreadyHasObj": 0,
+              "inputStage": {
+                "stage": "IXSCAN",
+                "nReturned": 10,
+                "executionTimeMillisEstimate": 2,
+                "works": 10,
+                "advanced": 10,
+                "needTime": 0,
+                "needYield": 0,
+                "saveState": 0,
+                "restoreState": 0,
+                "isEOF": 0,
+                "keyPattern": {
+                  "createdAt": -1
+                },
+                "indexName": "createdAt_-1",
+                "isMultiKey": false,
+                "multiKeyPaths": {
+                  "createdAt": []
+                },
+                "isUnique": false,
+                "isSparse": false,
+                "isPartial": false,
+                "indexVersion": 2,
+                "direction": "forward",
+                "indexBounds": {
+                  "createdAt": [
+                    "[MaxKey, MinKey]"
+                  ]
+                },
+                "keysExamined": 10,
+                "seeks": 1,
+                "dupsTested": 0,
+                "dupsDropped": 0
+              }
+            }
+          }
+        },
+        "queryShapeHash": "0743A6DEAC470A00D8C5952DE6E3C5718A88DE2514941ABD4A0D3FD6F938DA67",
+        "command": {
+          "find": "products",
+          "filter": {},
+          "sort": {
+            "createdAt": -1
+          },
+          "limit": 10,
+          "$db": "maren_benchmark"
+        },
+        "serverInfo": {
+          "host": "ac-qyd5aki-shard-00-01.qrqeutf.mongodb.net",
+          "port": 27017,
+          "version": "8.0.37",
+          "gitVersion": "8ece10cbfc3379404a0dffdfb448b9e873b494f7"
+        },
+        "serverParameters": {
+          "internalQueryFacetBufferSizeBytes": 104857600,
+          "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+          "internalLookupStageIntermediateDocumentMaxSizeBytes": 16793600,
+          "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+          "internalQueryMaxBlockingSortMemoryUsageBytes": 33554432,
+          "internalQueryProhibitBlockingMergeOnMongoS": 0,
+          "internalQueryMaxAddToSetBytes": 104857600,
+          "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+          "internalQueryFrameworkControl": "trySbeRestricted",
+          "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+        },
+        "ok": 1,
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": "7705549466534674447"
+          },
+          "signature": {
+            "hash": "eSHSD631ml15efnZLEnQMWWufTE=",
+            "keyId": {
+              "high": 1786389924,
+              "low": 6,
+              "unsigned": false
+            }
+          }
+        },
+        "operationTime": {
+          "$timestamp": "7705549466534674447"
+        }
+      },
+      "expectedClassification": "IXSCAN",
+      "passed": true
+    }
+  ],
+  "validationFailures": [],
+  "restoration": "restored 0 original createdAt index(es)",
+  "gitCommit": "02e8013bb58a65d2c6eafab13a8798d4e3620630",
+  "machine": {
+    "platform": "win32 10.0.26300",
+    "architecture": "x64",
+    "node": "v24.18.0",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "cpuCount": 12,
+    "totalMemoryBytes": 8212975616,
+    "freeMemoryBytesAtStart": 854007808
+  },
+  "command": "npm --prefix backend run benchmark:all"
+}

@@ -1,0 +1,522 @@
+{
+  "concurrency": 100,
+  "repetition": 15,
+  "productId": "6aefa15587236cd4c70c545a",
+  "successfulOrders": 1,
+  "rejectedOrders": 31,
+  "createdOrders": 1,
+  "finalStock": 0,
+  "unexpectedResponses": [
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    },
+    {
+      "status": 500,
+      "body": {
+        "error": "fetch failed"
+      }
+    }
+  ],
+  "statuses": [
+    201,
+    400,
+    500,
+    400,
+    500,
+    500,
+    500,
+    500,
+    400,
+    400,
+    400,
+    500,
+    400,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    500,
+    500,
+    400,
+    500,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    400,
+    500,
+    500,
+    500,
+    500,
+    500
+  ],
+  "passed": false
+}

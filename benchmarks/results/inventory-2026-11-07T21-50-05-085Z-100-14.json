@@ -1,0 +1,294 @@
+{
+  "concurrency": 100,
+  "repetition": 14,
+  "productId": "6aef9e79b54049430d90679e",
+  "successfulOrders": 1,
+  "rejectedOrders": 54,
+  "createdOrders": 1,
+  "finalStock": 0,
+  "unexpectedResponses": [
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    }
+  ],
+  "statuses": [
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    201,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR"
+  ],
+  "passed": false
+}

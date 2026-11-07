@@ -1,0 +1,13 @@
+{
+  "concurrentRequests": 50,
+  "sameIdempotencyKey": true,
+  "idempotencyKey": "aacc886f-efd4-4a07-974a-b4485c61d4b3",
+  "orderCount": 1,
+  "successfulResponses": 1,
+  "responseStatusCounts": {
+    "201": 1,
+    "409": 49
+  },
+  "finalStock": 0,
+  "passed": true
+}

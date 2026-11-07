@@ -1,0 +1,162 @@
+{
+  "concurrency": 100,
+  "repetition": 18,
+  "productId": "6aef9ecbb54049430d9067a2",
+  "successfulOrders": 1,
+  "rejectedOrders": 87,
+  "createdOrders": 1,
+  "finalStock": 0,
+  "unexpectedResponses": [
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "status": "NETWORK_ERROR",
+      "error": "The operation was aborted due to timeout"
+    }
+  ],
+  "statuses": [
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    201,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    400,
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    "NETWORK_ERROR",
+    400,
+    400,
+    400
+  ],
+  "passed": false
+}
