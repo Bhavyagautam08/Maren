@@ -1,50 +1,35 @@
-# Reproducible product-list benchmark
+# Maren benchmark suite
 
-**Status: not run.** The workspace does not have `BENCHMARK_MONGO_URI` or
-`BENCHMARK_DB_NAME` configured, so no benchmark measurements or raw Autocannon
-results are recorded. The runner refuses to modify indexes until an isolated
-database is explicitly configured.
-
-The runner executes these scenarios against
-`/api/v1/products?page=1&limit=10&sort=newest`, with 10 connections for 30
-seconds and exactly 100,000 products:
-
-1. No `createdAt` index; product-list cache disabled.
-2. `createdAt` index present; product-list cache disabled.
-3. `createdAt` index present; product-list cache enabled and warmed.
-
-| Scenario | Requests/sec | Average latency (ms) | P99 latency (ms) | Errors | Raw output |
-|---|---:|---:|---:|---:|---|
-| A | Not run | Not run | Not run | Not run | Not available |
-| B | Not run | Not run | Not run | Not run | Not available |
-| C | Not run | Not run | Not run | Not run | Not available |
-
-When run, the script writes raw Autocannon JSON under `benchmarks/results/` and
-replaces this page with the measured results, Git commit, machine details, and
-reproduction command.
-
-## Redis setup
-
-The backend uses its production-compatible Upstash Redis REST client and
-credentials (`UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`). Each
-benchmark run uses a unique product-cache namespace, so it does not overwrite or
-clear production product-list keys.
-
-## Run
-
-Configure an isolated MongoDB database containing exactly 100,000 products.
-`BENCHMARK_DB_NAME` must match the database name in the URI and contain
-`benchmark`; the script records and restores any pre-existing indexes on
-`createdAt`.
-
-From the repository root in PowerShell:
+The end-to-end benchmark command is:
 
 ```powershell
-$env:BENCHMARK_MONGO_URI = "<isolated benchmark MongoDB URI>"
-$env:BENCHMARK_DB_NAME = "<database name containing benchmark>"
-npm --prefix backend run benchmark:products
+npm --prefix backend run benchmark:all
 ```
 
-The benchmark MongoDB settings above are intentionally not saved in this
-repository. Redis connection settings are loaded by the backend using the same
-configuration as the application.
+Set `BENCHMARK_MONGO_URI` and `BENCHMARK_DB_NAME` in `backend/.env`. The suite
+uses the database selected by `BENCHMARK_DB_NAME` (which must contain
+`benchmark`) on the cluster in the URI. It verifies the selected database
+before writing. The suite replaces only that database's `products` collection
+with exactly 100,000 records generated using a fixed seed; it also creates and
+cleans up temporary order-test fixtures in that database.
+
+The application currently uses the production-configured **Upstash Redis REST**
+client. The benchmark suite pings the configured Redis service and records the
+provider in the generated results. Product list cache keys use a unique
+benchmark namespace.
+
+`benchmark:all` runs:
+
+1. A fixed-seed catalog seed.
+2. `explain("executionStats")` with and without a `createdAt` index.
+3. Autocannon throughput runs with 10 connections for 30 seconds for: no index
+   and cache disabled; index and cache disabled; index and warmed cache.
+4. Twenty stock-one inventory races at each of 2, 10, 50, and 100 simultaneous
+   buyers.
+5. Fifty concurrent order requests sharing the same idempotency key.
+
+Raw per-stage and per-scenario output is written to `benchmarks/results/` with
+the run timestamp. The generated results summary replaces this file after a
+run; it records measured values, failures/skips, the tested commit, machine
+details, Redis provider, and reproduction command. No result should be
+transcribed from an uncompleted run.

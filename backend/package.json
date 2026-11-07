@@ -8,7 +8,8 @@
     "dev": "nodemon server.js",
     "start": "node server.js",
     "seed": "node seed.js",
-    "benchmark:products": "node benchmarks/repro-product-cache.js"
+    "benchmark:products": "node benchmarks/benchmark-product-cache.js",
+    "benchmark:all": "node benchmarks/benchmark-all.js"
   },
   "keywords": [],
   "author": "",
