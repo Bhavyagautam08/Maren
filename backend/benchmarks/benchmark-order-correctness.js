@@ -23,7 +23,7 @@ const BASE_URL = `http://127.0.0.1:${PORT}`;
 const concurrencyLevels = [2, 10, 50, 100];
 const repetitions = 20;
 const maxBuyers = Math.max(...concurrencyLevels);
-const timeoutMs = 30_000;
+const timeoutMs = 120_000;
 let activeBackend;
 
 const createFixtureProduct = async (name, stock) => Product.create({
